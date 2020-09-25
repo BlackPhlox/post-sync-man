@@ -1,5 +1,5 @@
-let rb = eval(globals.lib)();
+let util = eval(globals.lib)();
 
-rb.lib_check()
+util.lib_check()
 
-console.log(rb.formatRequest("www.test.dk", "get"));
+console.log(util.formatRequest("www.test.com", "get"));
