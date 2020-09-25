@@ -16,7 +16,7 @@ postman.setGlobalVariable('lib', ()=> {
     }
 
     function err(str){
-        throw new Error(" RB Library | Function : " + arguments.callee.caller.caller.name + " | Reason: " + str + " |");
+        throw new Error(" Util Library | Function : " + arguments.callee.caller.caller.name + " | Reason: " + str + " |");
     }
 
     //"undefined"
@@ -113,12 +113,12 @@ postman.setGlobalVariable('lib', ()=> {
     }
 
     return {
-        lib_check : () => console.log("RB Library has been added to globals"),
+        lib_check : () => console.log("Util Library has been added to globals"),
         query : (q) => query(q),
         formatRequest: (url,method,headers,body) => formatRequest(url,method,headers,body),
         formatEnvRequest: (url,method,body) => formatEnvRequest(url,method,body)
     };
 });
 
-let rb = eval(globals.lib)();
-rb.lib_check();
+let util = eval(globals.lib)();
+util.lib_check();
